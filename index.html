@@ -80,6 +80,10 @@
     font-weight: 600;
     margin-bottom: 16px;
   }
+  .qnum.wide {
+    font-size: 10px;
+    letter-spacing: 0.01em;
+  }
   .question {
     font-size: 14px;
     line-height: 1.55;
@@ -118,6 +122,15 @@
     height: 6px;
     border-radius: 50%;
     background: var(--accent);
+  }
+  .highlight {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.45;
+    margin: 4px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
   }
   .footer {
     padding: 6px 0 0;
@@ -170,80 +183,109 @@
 <script>
 const data = [
   {
-    q: 1,
-    question: "Practical foundations needed to deliver the framework at scale.",
-    title: "AVT evaluation \u2192 Lexacom",
+    q: "Open",
+    title: "The view from neighbourhood level",
     bullets: [
-      "18-month pre-procurement evaluation of NHS registry AVT suppliers.",
-      "No magic technology \u2014 the supplier matters as much as the spec.",
-      "Criteria: protect practices from risk, serve people when they're tired, stressed, or overwhelmed.",
-      "Landed on Lexacom \u2014 UK company, UK servers, privately owned, commits to an afternote after every consultation."
-    ]
+      "Applied Philosopher, working in NHS primary care.",
+      "Most of this panel will be carried by people with more experience of the national picture \u2014 I'm here to show what it looks like at neighbourhood level.",
+      "Lead Digital & Transformation for a primary care network on the Dorset coast: 74,000 patients, 5 GP practices.",
+      "Coastal, rural, an ageing population, among the most deprived parts of the country \u2014 though it rarely feels that way, because it's so beautiful.",
+      "I build digital things for my neighbours myself, until I hit my technical ceiling \u2014 then I use LinkedIn to invite health tech companies inside the NHS to build the rest with me."
+    ],
+    highlight: "In Weymouth and on Portland, we're building the gold standard in neighbourhood health.",
+    footerText: "Opening"
+  },
+  {
+    q: 1,
+    question: "The Neighbourhood Health Framework sets a clear ambition, but what practical foundations in data, infrastructure, workforce, and system capability are needed to deliver it at scale?",
+    title: "Afternote",
+    bullets: [
+      "I believe the question mentioned practical foundations \u2014 when I hear \"practical foundations,\" I think about the most basic moment there is: what happens when you leave the room after seeing your doctor.",
+      "Roughly half of what's discussed in a GP consultation is forgotten, or remembered wrong, by the time the patient gets home.",
+      "Afternote: a short summary of what just happened, sent to the patient's phone before they've reached the car park \u2014 what just happened, what to watch out for, what to do next, written for the patient, not the record.",
+      "The theory of change: fewer things forgotten means fewer calls back into the practice, and fewer DNAs \u2014 which cost the NHS over \u00a3200 million a year.",
+      "The ambition: 'Afternote' becomes as familiar a word as prescription, referral, or appointment \u2014 familiar enough that SystmOne, EMIS (now Enlivio), Medicus, Accurx, X-on, and Lexacom feel they have to offer one.",
+      "Sending an Afternote will become best practice \u2014 and patients will start asking, 'will I get an Afternote sent to my phone?'"
+    ],
+    highlight: "So if any of you are listening: come and talk to me."
   },
   {
     q: 2,
-    question: "Moving from fragmented systems to true interoperability \u2014 what building blocks come first.",
-    title: "The INT lens",
+    question: "How do we move from fragmented systems to true interoperability that enables real-time collaboration across multidisciplinary neighbourhood teams, and what building blocks must be in place first?",
+    title: "The relational building blocks",
     bullets: [
-      "Interoperability at neighbourhood level is relational before it's technical.",
-      "Weekly learning lunches, monthly INT partnership groups.",
-      "The Local Social QR code was built through that lens."
+      "I believe the question is really asking what building blocks come first \u2014 and at neighbourhood level, I think the real building block is relational, not technical.",
+      "Weekly learning lunches and monthly INT partnership groups get multidisciplinary teams talking to each other, long before any system does.",
+      "The Local Social QR code came out of that relational work \u2014 a shared point any agency could send someone to, built without waiting for the systems behind it to talk to each other first.",
+      "On the wider market: we sit inside the TPP/EMIS duopoly, though there's a new player, Medicus, worth watching. I don't see a single patient record ever getting built and working \u2014 the technology exists, it's a market decision, not a technical one."
     ]
   },
   {
     q: 3,
-    question: "How neighbourhood teams need to be designed, supported, and connected.",
-    title: "Removing friction",
+    question: "What needs to change in how neighbourhood teams are designed, supported, and connected to ensure genuine transformation rather than simply repackaging existing services?",
+    title: "Energy, not another framework",
     bullets: [
-      "Started with: what if support was ridiculously easy to reach \u2014 everywhere, every phone, every lamp post.",
-      "Built three tools: the PCN website, QuickLinks, and The Local Social.",
-      "None ask for a name or login \u2014 friction stripped to a minimum."
-    ]
+      "I believe the question is asking what needs to change in how teams are designed and supported \u2014 honestly, what's missing isn't another framework, it's energy and new thinking.",
+      "I come from a very different academic and professional background to most people in these teams \u2014 an applied philosopher, not a clinician or an NHS manager \u2014 and I think that difference is useful, not a gap to close.",
+      "In my first week in this role, I contacted the NHS Dorset CEO directly. I had no real place doing that. I learned an enormous amount from it \u2014 and I didn't wait for permission.",
+      "The policy already points to this: it's about making it happen. That's less a design problem than a permission problem.",
+      "The people who understand their neighbourhood best should just get on and build for their neighbours \u2014 because people on Portland are not the same as people in Sunderland."
+    ],
+    highlight: "Genuine transformation isn't repackaged from somewhere else. It's built by people who actually know their own neighbourhood."
   },
   {
     q: 4,
-    question: "Can general practice data be better leveraged \u2014 are current EPRs equipped for it.",
-    title: "SystmOne vs Neighbourhood Signals",
+    question: "How can general practice data be better leveraged to support prevention, early intervention, and population health management, and are current EPRs equipped to support this level of integration and complexity?",
+    title: "The space before demand",
     bullets: [
-      "Sit in a SystmOne county / ICB area; unclear whether the single-platform aspiration reaches EPRs.",
-      "SystmOne data is already shaped and triaged by the time it's seen.",
-      "Neighbourhood Signals is raw, closer to the person \u2014 a real-time picture of unmet need."
-    ]
+      "I believe the question is asking whether current EPRs can support this level of integration \u2014 and honestly, I'm not sure they were built to.",
+      "We're awash with data. But that data has already been shaped and triaged for the clinical encounter it was recorded for \u2014 by the time you see it, the moment before it has gone.",
+      "We wanted to look at the space before demand: before that person becomes a referral, or an appointment.",
+      "We know people go online to search for support first. So we removed all the friction from that \u2014 every search becomes a tiny, anonymous signal."
+    ],
+    highlight: "That's new data. And it's the one thing service leads and the system can never have enough of: time."
   },
   {
     q: 5,
-    question: "Key operational barriers \u2014 trust, shared access, governance, role clarity.",
-    title: "Protecting practices from risk",
+    question: "What are the key operational barriers to making neighbourhood health a reality, particularly around trust, shared access, communication, governance, and role clarity?",
+    title: "Choosing an AVT supplier",
     bullets: [
-      "Rigorous supplier evaluation to protect practices from risk.",
-      "Choosing suppliers who serve people at their most overwhelmed.",
-      "MyScribe as the trusted alternative to covert recording."
+      "I believe the question is asking about trust, shared access, and governance \u2014 and for us, the sharpest version of that has been choosing an AVT supplier.",
+      "We ran an 18-month pre-procurement evaluation against the NHS AVT Supplier Registry, shortlisting four: Lexacom, TORTUS (via X-on Health), Tandem (via Accurx), and Heidi Health.",
+      "Trust isn't abstract here \u2014 it's about who you let listen to a consultation, where that recording goes, and whether the supplier actually understands general practice or is selling into it from outside.",
+      "We landed on Lexacom as our preferred supplier. Their founder came to the demo himself, with his implementation and training team, rather than sending a sales rep \u2014 that told us more about governance than any spec sheet did."
     ]
   },
   {
     q: 6,
-    question: "How co-production between solution providers and neighbourhood teams drives adoption.",
+    question: "How can co-production between solution providers and neighbourhood teams drive more meaningful adoption of digital tools, and what examples demonstrate this working successfully in practice?",
     title: "MyScribe",
     bullets: [
-      "Patients are already recording covertly \u2014 Meta Glasses, voice notes, ChatGPT.",
-      "Built the one the system trusts: a nurse, a psychologist, a social worker, an applied philosopher, and a national AVT partner.",
-      "Publicly invited health tech companies to come inside the NHS and co-build, via LinkedIn."
-    ]
+      "I believe the question is asking what drives real adoption of digital tools \u2014 and I think co-production only works when it starts from an honest problem, not a sales pitch.",
+      "Patients are already recording their appointments \u2014 covertly, on their phones, on Meta Glasses, into ChatGPT \u2014 because they know they'll forget what was said. That's happening whether or not the system engages with it.",
+      "So we're building MyScribe: the version the system can actually trust, built with a nurse, a psychologist, a social worker, an applied philosopher, and a national AVT partner in the room together.",
+      "I put the invitation out publicly on LinkedIn \u2014 health tech companies, come inside the NHS and co-build this with people who actually do the work, rather than build it for us and hope it lands."
+    ],
+    highlight: "That's what co-production looks like in practice: not a workshop, a build."
   },
   {
     q: 7,
-    question: "Strengthening partnerships with local authorities and VCSE organisations.",
-    title: "Applied philosophy",
+    question: "Given that many determinants of health sit outside healthcare, how can we strengthen partnerships with local authorities and VCSE organisations to deliver preventative support, improve outcomes, and reduce future demand on services?",
+    title: "Seeing the whole person",
     bullets: [
-      "Across multi-agency working, applied philosophy training has been the greatest strength.",
-      "It's a translation problem between institutions as much as a funding or structure problem."
-    ]
+      "I believe the question is asking how we strengthen partnerships across healthcare, local authorities, and VCSE \u2014 and the honest starting point is how much of general practice isn't actually medical.",
+      "National survey data shows roughly 1 in 5 GP appointments aren't for a medical problem at all \u2014 they're for loneliness, debt, or an unsafe relationship.",
+      "Across multi-agency working, I've found applied philosophy training is my greatest strength here \u2014 because this isn't really a funding problem or a structure problem, it's a translation problem between institutions that speak different languages about the same person.",
+      "Strengthening those partnerships means building the tools that let a GP practice, a council team, and a VCSE worker actually see the same person's situation, not three separate versions of it."
+    ],
+    highlight: "That's the gold standard: not one service doing more, but a neighbourhood that finally sees the whole person."
   }
 ];
 
 const deck = document.getElementById('deck');
 const progress = document.getElementById('progress');
 const hint = document.getElementById('hint');
+const totalQuestions = data.filter(d => typeof d.q === 'number').length;
 
 data.forEach(d => {
   const card = document.createElement('div');
@@ -251,13 +293,20 @@ data.forEach(d => {
 
   const qnum = document.createElement('div');
   qnum.className = 'qnum';
-  qnum.textContent = 'Q' + d.q;
+  if (typeof d.q === 'number') {
+    qnum.textContent = 'Q' + d.q;
+  } else {
+    qnum.textContent = d.q;
+    qnum.classList.add('wide');
+  }
   card.appendChild(qnum);
 
-  const question = document.createElement('p');
-  question.className = 'question';
-  question.textContent = d.question;
-  card.appendChild(question);
+  if (d.question) {
+    const question = document.createElement('p');
+    question.className = 'question';
+    question.textContent = d.question;
+    card.appendChild(question);
+  }
 
   const title = document.createElement('p');
   title.className = 'title';
@@ -273,9 +322,16 @@ data.forEach(d => {
   });
   card.appendChild(ul);
 
+  if (d.highlight) {
+    const highlight = document.createElement('p');
+    highlight.className = 'highlight';
+    highlight.textContent = d.highlight;
+    card.appendChild(highlight);
+  }
+
   const footer = document.createElement('div');
   footer.className = 'footer';
-  footer.textContent = 'Question ' + d.q + ' of ' + data.length;
+  footer.textContent = d.footerText ? d.footerText : ('Question ' + d.q + ' of ' + totalQuestions);
   card.appendChild(footer);
 
   deck.appendChild(card);
