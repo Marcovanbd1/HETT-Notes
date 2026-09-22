@@ -88,7 +88,7 @@
     font-size: 14px;
     line-height: 1.55;
     color: var(--ink-soft);
-    margin: 0 0 18px;
+    margin: 0 0 16px;
     border-left: 2px solid var(--line);
     padding-left: 12px;
   }
@@ -96,8 +96,28 @@
     font-size: 19px;
     font-weight: 600;
     line-height: 1.3;
-    margin: 0 0 16px;
+    margin: 0 0 14px;
     letter-spacing: -0.01em;
+  }
+  .link-line {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin: 0 0 16px;
+  }
+  .link-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.75;
+    margin-bottom: 4px;
   }
   .bullets {
     list-style: none;
@@ -169,7 +189,7 @@
 <body>
 
   <div class="header">
-    <p class="eyebrow">HETT 2026 &middot; opening panel prep</p>
+    <p class="eyebrow">HETT 2026 &middot; opening panel prep &middot; spoken-word practice script</p>
     <h1>Talking points</h1>
     <p class="sub">Neighbourhood Health: From Framework to Function</p>
   </div>
@@ -190,6 +210,8 @@ const data = [
       "Most of this panel will be carried by people with more experience of the national picture \u2014 I'm here to show what it looks like at neighbourhood level.",
       "Lead Digital & Transformation for a primary care network on the Dorset coast: 74,000 patients, 5 GP practices.",
       "Coastal, rural, an ageing population, among the most deprived parts of the country \u2014 though it rarely feels that way, because it's so beautiful.",
+      "There are problems to fix all over primary care. I find them and build towards solving them \u2014 and that's only possible at neighbourhood level.",
+      "With everything I build, I ask one question first: what does the patient get?",
       "I build digital things for my neighbours myself, until I hit my technical ceiling \u2014 then I use LinkedIn to invite health tech companies inside the NHS to build the rest with me."
     ],
     highlight: "In Weymouth and on Portland, we're building the gold standard in neighbourhood health.",
@@ -199,87 +221,86 @@ const data = [
     q: 1,
     question: "The Neighbourhood Health Framework sets a clear ambition, but what practical foundations in data, infrastructure, workforce, and system capability are needed to deliver it at scale?",
     title: "Afternote",
+    link: "When I hear \u201cpractical foundations,\u201d I think about the most basic moment there is: what happens when you leave the room after seeing your doctor.",
     bullets: [
-      "When I hear \"practical foundations,\" I think about the most basic moment there is: what happens when you leave the room after seeing your doctor.",
-      "With everything we build, I ask one question first: what does the patient get?",
       "Roughly half of what's discussed in a GP consultation is forgotten, or remembered wrong, by the time the patient gets home.",
-      "Afternote: a short summary of what just happened, sent to the patient's phone before they've reached the car park \u2014 what just happened, what to watch out for, what to do next, written for the patient, not the record.",
-      "The theory of change: fewer things forgotten means fewer calls back into the practice, and fewer DNAs \u2014 which cost the NHS over \u00a3200 million a year.",
-      "The ambition: 'Afternote' becomes as familiar a word as prescription, referral, or appointment \u2014 familiar enough that SystmOne, EMIS (now Enlivio), Medicus, Accurx, X-on, and Lexacom feel they have to offer one.",
-      "Sending an Afternote will become best practice \u2014 and patients will start asking, 'will I get an Afternote sent to my phone?'"
+      "Afternote: your clinician's words, made readable for your hardest day. A plain language note from your appointment or your hospital stay, made for reading at home. Every word comes from what your clinician said.",
+      "It's an open format. Any team can adopt it \u2014 this is the hospital-to-community shift the Ten Year Plan talks about, made real in one neighbourhood first.",
+      "Fewer things forgotten means fewer calls back into the practice, and fewer DNAs \u2014 which cost the NHS over \u00a3200 million a year."
     ],
     highlight: "So if any of you are listening: come and talk to me."
   },
   {
     q: 2,
     question: "How do we move from fragmented systems to true interoperability that enables real-time collaboration across multidisciplinary neighbourhood teams, and what building blocks must be in place first?",
-    title: "The relational building blocks",
+    title: "MyScribe",
+    link: "Let's start with \u201cinteroperability,\u201d because I think we use that word without ever asking what it actually means. Usually it means: can System A talk to System B.",
     bullets: [
-      "For me, at neighbourhood level, the real building block here is relational, not technical.",
-      "Weekly learning lunches and monthly INT partnership groups get multidisciplinary teams talking to each other, long before any system does.",
-      "On the wider market: we sit inside the TPP/EMIS duopoly, though there's a new player, Medicus, worth watching. I don't see a single patient record ever getting built and working \u2014 the technology exists, it's a market decision, not a technical one."
-    ]
+      "But every AVT sweeping into the NHS right now still locks the recording inside whichever system bought it. That's still just System A talking to System B.",
+      "Between 40 and 80 percent of a medical appointment is forgotten immediately. So we built MyScribe. Your appointment. Your record. On your phone.",
+      "The appointment goes home with the person who was in it."
+    ],
+    highlight: "That's a different kind of interoperability. One person who never has to ask permission to access their own conversation."
   },
   {
     q: 3,
     question: "What needs to change in how neighbourhood teams are designed, supported, and connected to ensure genuine transformation rather than simply repackaging existing services?",
-    title: "Energy, not another framework",
+    title: "Policy fluency, and how I work",
+    link: "You said \u2018repackaging\u2019 \u2014 that's exactly the risk I watch for.",
     bullets: [
-      "Honestly, what's missing isn't another framework \u2014 it's energy and new thinking.",
-      "I come from a very different academic and professional background to most people in these teams \u2014 an applied philosopher, not a clinician or an NHS manager \u2014 and I think that difference is useful, not a gap to close.",
-      "In my first week in this role, I contacted the NHS Dorset CEO directly. I had no real place doing that. I learned an enormous amount from it \u2014 and I didn't wait for permission.",
-      "The policy already points to this: it's about making it happen. That's less a design problem than a permission problem.",
-      "The people who understand their neighbourhood best should just get on and build for their neighbours \u2014 because people on Portland are not the same as people in Sunderland."
+      "I know the Ten Year Health Plan, the Neighbourhood Health Framework, and the Fuller Stocktake well. None of them are short of ambition.",
+      "What's missing isn't another framework. It's energy and new thinking, applied at the level people actually live their lives.",
+      "I come from a very different background to most people in these teams. An applied philosopher, not a clinician or an NHS manager. I think that difference is useful, not a gap to close.",
+      "In my first week in this role, I contacted the NHS Dorset CEO directly. I had no real place doing that. I didn't wait for permission."
     ],
-    highlight: "Genuine transformation isn't repackaged from somewhere else. It's built by people who actually know their own neighbourhood."
+    highlight: "The people who understand their neighbourhood best should just get on and build for their neighbours \u2014 because people on Portland are not the same as people in Sunderland."
   },
   {
     q: 4,
     question: "How can general practice data be better leveraged to support prevention, early intervention, and population health management, and are current EPRs equipped to support this level of integration and complexity?",
-    title: "The space before demand",
+    title: "Neighbourhood Signals",
+    link: "Honestly, I'm not sure current EPRs were built for this level of integration.",
     bullets: [
-      "Honestly, I'm not sure current EPRs were built for this level of integration.",
       "We're awash with data. But that data has already been shaped and triaged for the clinical encounter it was recorded for \u2014 by the time you see it, the moment before it has gone.",
-      "We wanted to look at the space before demand: before that person becomes a referral, or an appointment.",
-      "We know people go online to search for support first. So we removed all the friction from that \u2014 every search becomes a tiny, anonymous signal."
+      "We wanted to hear the neighbourhood before it reaches crisis. Neighbourhood Signals reads neighbourhood activity for themes of unmet need and puts it on a public dashboard, so the Integrated Neighbourhood Team can act early.",
+      "Ninety-one day pilot. Three signal clusters, already surfaced."
     ],
-    highlight: "That's new data. And it's the one thing service leads and the system can never have enough of: time."
+    highlight: "That's the sickness-to-prevention shift, working."
   },
   {
     q: 5,
     question: "What are the key operational barriers to making neighbourhood health a reality, particularly around trust, shared access, communication, governance, and role clarity?",
-    title: "Choosing an AVT supplier",
+    title: "Lexacom",
+    link: "For us, the sharpest version of trust, shared access, and governance has been choosing an AVT supplier.",
     bullets: [
-      "For us, the sharpest version of trust, shared access, and governance has been choosing an AVT supplier.",
-      "We quite rightly place rigour onto anything clinical. I believe we should bring that same rigour to the patient experience \u2014 that's what the AVT evaluation was, really.",
       "We ran an 18-month pre-procurement evaluation against the NHS AVT Supplier Registry, shortlisting four: Lexacom, TORTUS (via X-on Health), Tandem (via Accurx), and Heidi Health.",
-      "Trust isn't abstract here \u2014 it's about who you let listen to a consultation, where that recording goes, and whether the supplier actually understands general practice or is selling into it from outside.",
-      "We landed on Lexacom as our preferred supplier. Their founder came to the demo himself, with his implementation and training team, rather than sending a sales rep \u2014 that told us more about governance than any spec sheet did."
-    ]
+      "We landed on Lexacom, and it wasn't close. UK company, UK servers, privately owned rather than VC-backed, and an existing relationship across general practice the others don't have yet.",
+      "If we're paying for a piece of tech, I want to get as much value out of it as possible. We don't just switch it on and hope \u2014 we make suppliers work for that value."
+    ],
+    highlight: "Their founder came to the demo himself, with his implementation and training team, rather than sending a sales rep. That told us more about governance than any spec sheet did."
   },
   {
     q: 6,
     question: "How can co-production between solution providers and neighbourhood teams drive more meaningful adoption of digital tools, and what examples demonstrate this working successfully in practice?",
-    title: "MyScribe",
+    title: "CoLab Lens",
+    link: "You said \u2018co-production\u2019 \u2014 for me that's not a workshop, it's a rule: nothing gets built until the people it affects have shaped it.",
     bullets: [
-      "I think co-production only really works when it starts from an honest problem, not a sales pitch.",
-      "Patients are already recording their appointments \u2014 covertly, on their phones, on Meta Glasses, into ChatGPT \u2014 because they know they'll forget what was said. That's happening whether or not the system engages with it.",
-      "So we're building MyScribe: a patient-facing, patient-owned ambient scribe \u2014 the version the system can actually trust, built with a national AVT partner alongside us.",
-      "Where there are important patient-facing decisions to be made, we use something we call the CoLab Lens \u2014 a nurse, a psychologist, a social worker, and an applied philosopher, shaping how MyScribe speaks to the patient, not checking it afterwards.",
-      "It's a real patient power piece: it's their appointment, recorded on their own device, for them \u2014 not another clinical system deciding what they get to keep.",
-      "I put the invitation out publicly on LinkedIn \u2014 health tech companies, come inside the NHS and co-build this with people who actually do the work, rather than build it for us and hope it lands."
+      "Patients are already recording their appointments, on their phones, into ChatGPT, without any say over what happens to it afterwards.",
+      "So the honest problem wasn't \u2018should this exist.\u2019 It already does. It was: who shapes it so it can be trusted.",
+      "That's the CoLab Lens: a checking layer for wherever a machine speaks to a person. Four professional perspectives \u2014 a nurse, a social worker, a counselling psychologist, and an applied philosopher \u2014 looking through five dimensions of emotional architecture. It works only with what was said, and softens clinical language until it actually helps the person receiving it.",
+      "It's held by Neighbourhood CoLab CIC. Asset locked. Not something a shareholder can walk off with.",
+      "I put the invitation out publicly on LinkedIn \u2014 health tech companies, come and help me finish this. Two answered: Accuro, the transcription supplier to the GMC, backing MyScribe commercially. Shuru Tech, an engineering team building it alongside us, for free, to get a genuine NHS foothold."
     ],
-    highlight: "That's what co-production looks like in practice: not a workshop, a build."
+    highlight: "That's what co-production looks like in practice."
   },
   {
     q: 7,
     question: "Given that many determinants of health sit outside healthcare, how can we strengthen partnerships with local authorities and VCSE organisations to deliver preventative support, improve outcomes, and reduce future demand on services?",
     title: "Seeing the whole person",
+    link: "You're right that most determinants of health sit outside healthcare. Most days in general practice, so does the appointment.",
     bullets: [
-      "The honest starting point here is how much of general practice isn't actually medical.",
-      "National survey data shows roughly 1 in 5 GP appointments aren't for a medical problem at all \u2014 they're for loneliness, debt, or an unsafe relationship.",
-      "Across multi-agency working, I've found applied philosophy training is my greatest strength here \u2014 because this isn't really a funding problem or a structure problem, it's a translation problem between institutions that speak different languages about the same person.",
-      "Strengthening those partnerships means building the tools that let a GP practice, a council team, and a VCSE worker actually see the same person's situation, not three separate versions of it."
+      "National survey data shows roughly 1 in 5 GP appointments aren't for a medical problem at all. They're for loneliness, debt, or an unsafe relationship.",
+      "Applied philosophy training is my greatest strength here, because this isn't really a funding or structure problem \u2014 it's a translation problem between institutions that speak different languages about the same person."
     ],
     highlight: "That's the gold standard: not one service doing more, but a neighbourhood that finally sees the whole person."
   }
@@ -315,6 +336,17 @@ data.forEach(d => {
   title.className = 'title';
   title.textContent = d.title;
   card.appendChild(title);
+
+  if (d.link) {
+    const linkBox = document.createElement('div');
+    linkBox.className = 'link-line';
+    const label = document.createElement('span');
+    label.className = 'link-label';
+    label.textContent = 'Opening line \u2014 links question to answer';
+    linkBox.appendChild(label);
+    linkBox.appendChild(document.createTextNode(d.link));
+    card.appendChild(linkBox);
+  }
 
   const ul = document.createElement('ul');
   ul.className = 'bullets';
