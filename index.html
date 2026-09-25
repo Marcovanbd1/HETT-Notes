@@ -127,10 +127,24 @@
   }
   .bullets li {
     font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
     color: var(--ink);
+    position: relative;
+    padding-left: 16px;
   }
+  .bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.6;
+  }
+  .question strong { color: var(--ink); font-weight: 600; }
   .highlight {
     font-size: 15px;
     font-weight: 600;
@@ -191,106 +205,149 @@
 <script>
 const data = [
   {
-    q: "Open",
-    title: "The view from neighbourhood level",
-    bullets: [
-      "I'm an applied philosopher, and somehow, I find myself working in NHS primary care. I'm here to show what neighbourhood health looks like at neighbourhood level.",
-      "I lead Digital and Transformation for a primary care network on the Dorset coast: 74,000 patients, five GP practices. Coastal, rural, ageing, and among the most deprived parts of the country, though it rarely feels that way, because it's so beautiful.",
-      "Before the NHS, I spent twenty years in broadcast television, separating signal from noise. While I was there, the industry moved from tape to server, analogue to digital. Now the NHS is making the same shift, and I'm living through it again, from the inside.",
-      "It's a new kind of role in primary care. No one's done it for long enough to tell me how it should be done, which gives me room to be creative. The day to day is finding digital solutions to my neighbourhood's problems: smart triage, ambient voice, remote monitoring, wearables. Which means endless demos from many of the companies in this room. Varying degrees of sales pressure. It's been fascinating.",
-      "With everything I build, I ask one question first: what does the patient get? I build for my neighbours myself, until I hit my technical ceiling. Then I invite health tech companies to build the rest with me."
+    "q": "Open",
+    "title": "The view from neighbourhood level",
+    "link": "I'm an applied philosopher, and somehow, I find myself working in NHS primary care. I'm here to show what neighbourhood health looks like at neighbourhood level.",
+    "bullets": [
+      "I lead **Digital and Transformation** for a PCN on the Dorset coast: **74,000 patients, five GP practices**",
+      "Coastal, rural, ageing, among the most deprived, \"though it rarely feels that way, because it's so beautiful\"",
+      "**Twenty years in broadcast**, separating signal from noise",
+      "Industry moved **tape to server, analogue to digital**; NHS making the same shift, \"living through it again, from the inside\"",
+      "**New role:** no one's done it long enough to tell me how, so room to be creative",
+      "Day to day: smart triage, ambient voice, remote monitoring, wearables",
+      "Endless demos from the companies in this room. \"Varying degrees of sales pressure.\" Fascinating",
+      "Always ask first: **\"what does the patient get?\"**",
+      "Build for my neighbours until my **technical ceiling**, then invite health tech companies to build the rest with me"
     ],
-    highlight: "In Weymouth and on Portland, we're building the gold standard in neighbourhood health.",
-    footerText: "Opening"
+    "close": "In Weymouth and on Portland, we're building the gold standard in neighbourhood health.",
+    "footerText": "Opening"
   },
   {
-    q: 1,
-    question: "The Neighbourhood Health Framework sets a clear ambition, but what practical foundations in data, infrastructure, workforce, and system capability are needed to deliver it at scale?",
-    title: "AVT and wearables",
-    link: "When I hear \u201cpractical foundations,\u201d I go straight to what national policy has actually asked us to do on digital. The Ten Year Plan points to two things: ambient voice technology and wearables.",
-    bullets: [
-      "In primary care, I spent eighteen months on a pre-procurement evaluation of the AVT suppliers on the NHS registry. You'll have heard the names: Heidi, TORTUS, Tandem, Lexacom. What I learned is that there's no magic technology.",
-      "So I became more interested in who the supplier was. Are they a UK company, with UK servers? Do they have existing NHS relationships? And, importantly, how are they funded?",
-      "We settled on Lexacom. Not the loudest in the room, but they gave the best answers to my questions. And it wasn't a sales rep who came to see us. It was the founder and MD, Dr Andrew Whiteley, who visited in person to demo and to understand how our teams actually work.",
-      "Wearables are harder. I haven't yet found one that passes those same questions for my patch. Most of what's out there sends people's health data somewhere they can't see, and most of it assumes you can afford the device and the smartphone to go with it.",
-      "In one of the most deprived parts of the country, that's not a foundation. That's a new inequality. I'd love to build something that works for everyone."
+    "q": 1,
+    "question": "The Neighbourhood Health Framework sets a clear ambition, but what **practical foundations** in **data, infrastructure, workforce, and system capability** are needed to deliver it **at scale**?",
+    "title": "AVT and wearables",
+    "link": "When I hear “practical foundations,” I go straight to what national policy has actually asked us to do on digital. The Ten Year Plan points to two things: ambient voice technology and wearables.",
+    "bullets": [
+      "**AVT:** 18-month pre-procurement evaluation of the NHS registry suppliers",
+      "Heidi, TORTUS, Tandem, Lexacom: \"there's no magic technology\"",
+      "So I looked at the supplier: UK company? UK servers? NHS relationships? **How are they funded?**",
+      "Chose Lexacom: \"not the loudest in the room,\" but the best answers",
+      "Founder and MD **Dr Andrew Whiteley** came in person, not a sales rep, to understand how our teams work",
+      "**Wearables:** none yet pass the same questions for my patch",
+      "Data goes somewhere people can't see; assumes you can afford the device and smartphone",
+      "One of the most deprived areas: **\"not a foundation, a new inequality\"**",
+      "\"I'd love to build something that works for everyone\""
     ],
-    highlight: "The foundation isn't the technology. It's knowing who you're building with."
+    "close": "The foundation isn't the technology. It's knowing who you're building with."
   },
   {
-    q: 2,
-    question: "How do we move from fragmented systems to true interoperability that enables real-time collaboration across multidisciplinary neighbourhood teams, and what building blocks must be in place first?",
-    title: "People first, then the market",
-    link: "When I hear \u201cinteroperability,\u201d we usually mean: does System A talk to System B? At PCN level, does it talk to SystmOne? That matters. But I don't think it's the first building block.",
-    bullets: [
-      "I came into the NHS recently enough that I've never known anything other than Integrated Neighbourhood Teams: health, social care, and the voluntary and community sector working together to wrap around the person. In Weymouth and Portland, we have weekly Learning Lunches and a monthly Integrated Neighbourhood Partnership Group. The relationships came first.",
-      "The systems are catching up more slowly. In general practice, almost everything runs through two suppliers: TPP, with SystmOne, and EMIS, now Enlivio. Every new tool we bring in lives or dies on whether it integrates with them. That gives two companies a great deal of say over what neighbourhood health can look like in practice.",
-      "So I'll be watching closely to see how a newcomer like Medicus gets on. Real interoperability might need real competition."
+    "q": 2,
+    "question": "How do we move from **fragmented systems** to **true interoperability** that enables **real-time collaboration** across **multidisciplinary neighbourhood teams**, and what **building blocks** must be in place **first**?",
+    "title": "People first, then the market",
+    "link": "When I hear “interoperability,” we usually mean: does System A talk to System B? At PCN level, does it talk to SystmOne? That matters. But I don't think it's the first building block.",
+    "bullets": [
+      "Came into the NHS recently enough that I've **only ever known Integrated Neighbourhood Teams**",
+      "Health, social care and the VCS **wrapping around the person**",
+      "Weekly **Learning Lunches**, monthly **Integrated Neighbourhood Partnership Group**",
+      "**\"The relationships came first\"**",
+      "Systems catching up more slowly",
+      "General practice runs through **two suppliers: TPP (SystmOne) and EMIS, now Enlivio**",
+      "Every new tool lives or dies on integrating with them: two companies, a great deal of say",
+      "Watching how a newcomer, **Medicus**, gets on",
+      "**\"Real interoperability might need real competition\"** (full stop, no sign-off)"
     ]
   },
   {
-    q: 3,
-    question: "What needs to change in how neighbourhood teams are designed, supported, and connected to ensure genuine transformation rather than simply repackaging existing services?",
-    title: "Thinking from different backgrounds",
-    link: "You said \u201crepackaging,\u201d and I think that's what happens when we design neighbourhood teams with the same people, the same training and the same thinking we've always had. You get the same services with a new name on the door.",
-    bullets: [
-      "What's needed is innovative and creative thinking from different backgrounds. And with AI moving into healthcare, I'd go further. What's needed at the heart of this, inside the NHS and inside the companies building for it, is applied philosophical thinking. Questions of ethics, of fairness, of what we owe the person on the other end. I studied applied philosophy a long time ago. I've never needed it more than I do now.",
-      "And it changes how we support teams. We talk about digital confidence as if it can be delivered through training modules. I don't think it can. People become confident through the lived experience of systems that are well designed, supportive and human. Confidence is an outcome of the environment, not a module. Otherwise we risk scaling activity rather than progress.",
-      "I'll be honest: some days a different background feels like a superpower. Other days it feels like the system doesn't quite know what to do with me. But that's the point. If neighbourhood teams are going to be genuinely new, we have to design them to include people who think differently, and then make room for them to do it."
+    "q": 3,
+    "question": "What needs to change in how neighbourhood teams are **designed, supported, and connected** to ensure **genuine transformation** rather than simply **repackaging existing services**?",
+    "title": "Thinking from different backgrounds",
+    "link": "You said “repackaging,” and I think that's what happens when we design neighbourhood teams with the same people, the same training and the same thinking we've always had. You get the same services with a new name on the door.",
+    "bullets": [
+      "**Designed:** creative thinking from different backgrounds",
+      "With AI moving into healthcare, go further: **applied philosophical thinking** at the heart of it, in the NHS and in the companies building for it",
+      "Ethics, fairness, **what we owe the person on the other end**",
+      "\"I studied applied philosophy a long time ago. **I've never needed it more than I do now**\"",
+      "**Supported:** digital confidence can't be delivered through training modules",
+      "People become confident through systems that are **well designed, supportive and human**",
+      "**\"Confidence is an outcome of the environment, not a module\"**",
+      "Otherwise we risk **scaling activity rather than progress**",
+      "Honest: some days a **superpower**; other days the system doesn't quite know what to do with me",
+      "\"That's the point\": design teams to include people who think differently, then **make room for them**"
     ],
-    highlight: "Transformation doesn't come from new structures. It comes from new thinking inside them."
+    "close": "Transformation doesn't come from new structures. It comes from new thinking inside them."
   },
   {
-    q: 4,
-    question: "How can general practice data be better leveraged to support prevention, early intervention, and population health management, and are current EPRs equipped to support this level of integration and complexity?",
-    title: "The space before demand",
-    link: "We're awash with data. And the NHS, and our EPRs, are really good at understanding demand at the point it becomes an appointment or a referral. That's what they were built for. We wanted to look at the space before demand.",
-    bullets: [
-      "Around one in five people who see their GP are there for something that's primarily social: loneliness, debt, an unsafe relationship. By the time that becomes an appointment, it's already late.",
-      "Every time someone in our neighbourhood looks for support online, it leaves a tiny, anonymous signal of what they're looking for help with. Put together, those signals show us what the neighbourhood is actually going through, in close to real time.",
-      "It gives us visibility of unmet need, without any surveillance."
+    "q": 4,
+    "question": "How can **general practice data** be better leveraged to support **prevention, early intervention, and population health management**, and are **current EPRs equipped** to support this level of integration and complexity?",
+    "title": "The space before demand",
+    "link": "We're awash with data. And the NHS, and our EPRs, are really good at understanding demand at the point it becomes an appointment or a referral. That's what they were built for. We wanted to look at the space before demand.",
+    "bullets": [
+      "**Around one in five** people who see their GP are there for something primarily social",
+      "Loneliness, debt, an unsafe relationship",
+      "By the time it's an appointment, **it's already late**",
+      "Every time someone locally looks for support online: a **tiny, anonymous signal**",
+      "Put together: what the neighbourhood is going through, **close to real time**",
+      "**Visibility of unmet need, without any surveillance**",
+      "(If asked: no personal data, only aggregate signals, nothing linked to an individual)"
     ],
-    highlight: "EPRs tell us what people come in with. Those signals tell us what they're living with."
+    "close": "EPRs tell us what people come in with. Those signals tell us what they're living with."
   },
   {
-    q: 5,
-    question: "What are the key operational barriers to making neighbourhood health a reality, particularly around trust, shared access, communication, governance, and role clarity?",
-    title: "MyScribe",
-    link: "The barrier I'd pick is where three on that list meet: trust, communication and governance. And it's happening in consulting rooms right now.",
-    bullets: [
-      "Between 40 and 80 percent of what's said in a medical consultation is forgotten almost immediately. Patients know this. So they're already recording their appointments, on their phones, into ChatGPT, even on smart glasses. Often covertly.",
-      "That's a trust problem, because it happens without the clinician knowing. It's a communication problem, because they're recording in the first place since they can't hold on to what was said. And it's a governance problem, because none of it is governed at all.",
-      "Clinicians across the NHS are about to get ambient voice technology. So I asked my usual question: what does the patient get? Why don't we give them their own ambient scribe, in their pocket, for every conversation that matters? Recorded openly, with consent. A summary on your phone afterwards of what happened, what to watch out for, and what to do next.",
-      "It changes the conversation itself. You can actually be present. No scribbled notes. You don't have to remember to do the remembering. And for the practice, it means fewer missed appointments and fewer calls back because someone can't remember a detail.",
-      "So we're building the voice recorder the NHS can trust. It's called MyScribe. Your appointment. Your record. On your phone.",
-      "And in a shameless bit of self-promotion: if you'd like to know more about MyScribe, please find me afterwards, or grab one of my cards."
+    "q": 5,
+    "question": "What are the key **operational barriers** to making neighbourhood health a reality, particularly around **trust, shared access, communication, governance, and role clarity**?",
+    "title": "MyScribe",
+    "link": "The barrier I'd pick is where three on that list meet: trust, communication and governance. And it's happening in consulting rooms right now.",
+    "bullets": [
+      "**40 to 80 percent** of a consultation forgotten almost immediately",
+      "Patients already recording: phones, ChatGPT, smart glasses. **Often covertly**",
+      "**Trust:** happens without the clinician knowing",
+      "**Communication:** they record because they can't hold on to what was said",
+      "**Governance:** none of it is governed at all",
+      "Clinicians getting AVT, so: **\"what does the patient get?\"**",
+      "Their own ambient scribe, in their pocket, **recorded openly, with consent**",
+      "Summary on your phone: what happened, what to watch for, what to do next",
+      "**Be present.** No scribbled notes. **\"You don't have to remember to do the remembering\"**",
+      "For the practice: **fewer missed appointments, fewer call backs**",
+      "\"The voice recorder the NHS can trust.\" **MyScribe.** Your appointment. Your record. On your phone",
+      "\"In a shameless bit of self-promotion\": find me afterwards, or **grab one of my cards**"
     ],
-    highlight: "For every conversation that matters."
+    "close": "For every conversation that matters."
   },
   {
-    q: 6,
-    question: "How can co-production between solution providers and neighbourhood teams drive more meaningful adoption of digital tools, and what examples demonstrate this working successfully in practice?",
-    title: "Co-production, the other way round",
-    link: "I see co-production a bit differently. It's not a supplier asking an NHS team for feedback on their product. It's the other way round.",
-    bullets: [
-      "I've talked about how I work. I build for my neighbours until I hit my technical ceiling, then I invite health tech companies in to help me finish the build. I'm bootstrapping this from inside the NHS, and it turns out companies are very interested in that approach.",
-      "What I described a moment ago is the example. We're speaking to Deepgram, Accuro and Patients Know Best, and our AI engineers are Shuru Tech. I've brought those companies together to address a problem my neighbours are actually facing."
+    "q": 6,
+    "question": "How can **co-production** between **solution providers and neighbourhood teams** drive more **meaningful adoption** of digital tools, and what **examples** demonstrate this **working successfully in practice**?",
+    "title": "Co-production, the other way round",
+    "link": "I see co-production a bit differently. It's not a supplier asking an NHS team for feedback on their product. It's the other way round.",
+    "bullets": [
+      "How I work: build to my **technical ceiling**, then invite health tech companies to finish the build",
+      "**Bootstrapping this from inside the NHS**; companies are very interested in that approach",
+      "The example: **MyScribe**, which I mentioned earlier",
+      "Speaking to **Deepgram, Accuro and Patients Know Best**",
+      "Our AI engineers: **Shuru Tech**",
+      "I've **brought those companies together** around a problem my neighbours actually face"
     ],
-    highlight: "That's real co-production. It starts with the neighbourhood's problem, not the supplier's product."
+    "close": "That's real co-production. It starts with the neighbourhood's problem, not the supplier's product."
   },
   {
-    q: 7,
-    question: "Given that many determinants of health sit outside healthcare, how can we strengthen partnerships with local authorities and VCSE organisations to deliver preventative support, improve outcomes, and reduce future demand on services?",
-    title: "A short answer, and a close",
-    link: "I've talked a lot this morning about Integrated Neighbourhood Team working, so I'll keep this short.",
-    bullets: [
-      "I'll just say that I think we're asking a lot of the voluntary and community sector, and we need to treat them as the equal partner they are.",
-      "But Lisa is far better placed than me to talk about working with local authorities, so I'd love to hear her view. (If Lisa has already spoken, drop this line.)"
+    "q": 7,
+    "question": "Given that many **determinants of health sit outside healthcare**, how can we **strengthen partnerships with local authorities and VCSE organisations** to deliver preventative support, improve outcomes, and reduce future demand on services?",
+    "title": "A short answer, and a close",
+    "link": "I've talked a lot this morning about Integrated Neighbourhood Team working, so I'll keep this short.",
+    "bullets": [
+      "We're **asking a lot of the VCS**; treat them as the **equal partner** they are",
+      "**Hand to Lisa:** far better placed on local authorities (drop if she's already spoken)",
+      "Ten Year Plan, Neighbourhood Health Framework, Fuller Stocktake: **none short of ambition**",
+      "**\"Framework to function\" literally means:** the people who know their neighbourhoods, and their neighbours, should **get on and build**",
+      "In Weymouth and on Portland, that's what we're doing"
     ],
-    highlight: "And for my part: we have the Ten Year Plan, the Neighbourhood Health Framework, and the Fuller Stocktake. None of them are short of ambition. For me, \u201cframework to function\u201d literally means this: the people who know their neighbourhoods, and their neighbours, should get on and build. In Weymouth and on Portland, that's what we're doing. We're building the gold standard in neighbourhood health. If you'd like to see it, come and find me."
+    "close": "We're building the gold standard in neighbourhood health. If you'd like to see it, come and find me."
   }
 ];
 
+function md(t){
+  const e=t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  return e.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+}
 const deck = document.getElementById('deck');
 const progress = document.getElementById('progress');
 const hint = document.getElementById('hint');
@@ -313,7 +370,7 @@ data.forEach(d => {
   if (d.question) {
     const question = document.createElement('p');
     question.className = 'question';
-    question.textContent = d.question;
+    question.innerHTML = md(d.question);
     card.appendChild(question);
   }
 
@@ -327,9 +384,9 @@ data.forEach(d => {
     linkBox.className = 'link-line';
     const label = document.createElement('span');
     label.className = 'link-label';
-    label.textContent = 'Opening line';
+    label.textContent = 'Open';
     linkBox.appendChild(label);
-    linkBox.appendChild(document.createTextNode(d.link));
+    const lt=document.createElement('span'); lt.innerHTML=md(d.link); linkBox.appendChild(lt);
     card.appendChild(linkBox);
   }
 
@@ -337,15 +394,15 @@ data.forEach(d => {
   ul.className = 'bullets';
   d.bullets.forEach(b => {
     const li = document.createElement('li');
-    li.textContent = b;
+    li.innerHTML = md(b);
     ul.appendChild(li);
   });
   card.appendChild(ul);
 
-  if (d.highlight) {
+  if (d.close) {
     const highlight = document.createElement('p');
     highlight.className = 'highlight';
-    highlight.textContent = d.highlight;
+    highlight.innerHTML = '<span class="link-label">Close</span>' + md(d.close);
     card.appendChild(highlight);
   }
 
