@@ -26,10 +26,11 @@ body{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset
 .lab{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin-bottom:5px}
 .open{background:var(--accent-soft);color:var(--accent);border-radius:12px;padding:12px 14px;font-size:17px;line-height:1.45;font-weight:600;margin-bottom:16px}
 ul{list-style:none;margin:0 0 16px;padding:0}
-li{position:relative;padding:10px 0 10px 22px;font-size:19px;line-height:1.35;border-bottom:1px solid var(--line)}
+li{position:relative;padding:10px 0 10px 22px;font-size:17px;line-height:1.45;border-bottom:1px solid var(--line)}
 li:last-child{border-bottom:0}
 li::before{content:"";position:absolute;left:4px;top:19px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
 li strong{font-weight:700}
+li em{font-style:normal;color:var(--soft);font-size:16px}
 .close{background:var(--close);color:var(--close-ink);border-radius:12px;padding:12px 14px;font-size:17px;line-height:1.45;font-weight:600}
 </style>
 </head>
@@ -42,39 +43,40 @@ const data = [
   "q": 1,
   "tag": "Foundations",
   "question": "The Neighbourhood Health Framework sets a clear ambition, but what **practical foundations** in **data, infrastructure, workforce, and system capability** are needed to deliver it **at scale**?",
-  "open": "For me, the most important practical foundation is knowing who owns the infrastructure we're building on. Take ambient voice technology.",
+  "open": "There are lots of practical foundations, from workforce to funding. But I want to focus on the decisions being made right now that we'll all be building on for years. And one of the biggest, across the whole NHS, is ambient voice technology.",
   "bullets": [
-   "Over time, AVT **sinks into the system**: it becomes infrastructure",
-   "UK company, UK servers, **how funded?**",
-   "Across the **neighbourhood**, not just the consulting room",
-   "18 months, **Lexacom**, founder came himself"
+   "AVT listens to a consultation, with the patient's consent, and drafts the notes, so the clinician can **look at the patient instead of the screen**.",
+   "You'll have heard the names: Heidi, Tandem, TORTUS, Lexacom. I've spent **eighteen months** researching them, and the technology is **converging**. The real difference is the company behind it.",
+   "Because AVT will become infrastructure, **the foundation is knowing who owns it**. Are they a UK company, with UK servers? And **how are they funded?**",
+   "And it has to work **across the whole neighbourhood**: the social worker's visit, the voluntary sector worker in someone's kitchen, not just the consulting room. We chose **Lexacom**, and the founder came down himself."
   ],
-  "close": "We haven't rolled AVT out yet, deliberately. We'll make sure we get the practical foundations right. They come before the technology itself."
+  "close": "AVT isn't a product decision. It's an infrastructure decision. And we should make it like one."
  },
  {
   "q": 2,
   "tag": "Interoperability",
   "question": "How do we move from **fragmented systems** to **true interoperability** that enables **real-time collaboration** across **multidisciplinary neighbourhood teams**, and what **building blocks** must be in place **first**?",
-  "open": "For me, the first building block isn't the systems. It's the person. Health, social care and the voluntary sector don't share a record, and the systems won't join up any time soon.",
+  "open": "True interoperability is the goal, but honestly, the systems won't join up any time soon. So in Weymouth and Portland, we stopped waiting for them.",
   "bullets": [
-   "Where do people start? How do they reach **the right help**?",
-   "Three routes in: **reception, QR codes, PCN website**",
-   "Built through an **INT lens**: one team around the person",
-   "Two or three taps: **one front door**"
+   "So we started with the person. Where do people actually go when something goes wrong, and **how do they reach the right help**, whichever sector it sits in?",
+   "We built simple routes into support through an **INT lens**: health, social care and the voluntary sector as one team around the person.",
+   "Links at the **reception desk**, **QR codes** out in the community, and our **PCN website**. Two or three taps, and you're there.",
+   "It's **one front door, with three sectors behind it**."
   ],
-  "close": "The patient shouldn't have to do the legwork of joining up those services."
+  "close": "We couldn't join up the systems yet. So we joined up the front door."
  },
  {
   "q": 3,
   "tag": "Transformation",
   "question": "What needs to change in how neighbourhood teams are **designed, supported, and connected** to ensure **genuine transformation** rather than simply **repackaging existing services**?",
-  "open": "You said “repackaging,” and that's what happens when we design teams with the same people, the same training and the same thinking.",
+  "open": "Design, support and connection all matter, but I'd start with design. You said “repackaging,” and that's what happens when we design teams with the same people, the same training and the same thinking.",
   "bullets": [
-   "Design teams with **different backgrounds**",
-   "AI: **ethics, fairness, what we owe the person**",
-   "Applied philosophy: **never needed mine more**"
+   "So we need to design teams with **different backgrounds** in them, not just more of the same.",
+   "Because with AI arriving, the hard questions aren't just technical. They're about **ethics, fairness, and what we owe the person** on the other end.",
+   "That's applied philosophy. I studied it a long time ago, and I've **never needed it more** than I do now.",
+   "That's why our team is a nurse, a social worker, a counselling psychologist and an applied philosopher, with **over a century of lived experience** as carers and patients between us."
   ],
-  "close": "Transformation doesn't come from new structures. It comes from new thinking inside them. I'm still waiting for Google or Apple to make me their Applied Philosopher in Residence. They haven't called yet."
+  "close": "Transformation doesn't come from new structures. It comes from new thinking inside them."
  },
  {
   "q": 4,
@@ -82,10 +84,10 @@ const data = [
   "question": "How can **general practice data** be better leveraged to support **prevention, early intervention, and population health management**, and are **current EPRs equipped** to support this level of integration and complexity?",
   "open": "General practice data is incredibly rich. Decades of it, for almost everyone in the neighbourhood. But it was built for the appointment, not the population.",
   "bullets": [
-   "Records what was treated, **not what's going on**",
-   "EPRs: one consultation at a time, **can't see it coming**",
-   "**Neighbourhood Signals**: anonymous taps, no personal data",
-   "Alongside the GP record: **the whole picture**"
+   "It tells us what was treated. It rarely tells us **what's going on in someone's life**: the loneliness, the debt, the unsafe relationship.",
+   "And our EPRs were designed around **one consultation at a time**. They're very good at recording demand, but they were **never designed to see it coming**.",
+   "So we added what the record can't see. We call it **Neighbourhood Signals**. Every tap on our routes into support leaves a **tiny, anonymous signal**, with no logins and no personal data.",
+   "Put that **alongside the GP record**, and you start to see **the whole picture**."
   ],
   "close": "EPRs tell us what people come in with. Neighbourhood signals tell us what they're living with."
  },
@@ -93,12 +95,12 @@ const data = [
   "q": 5,
   "tag": "Barriers",
   "question": "What are the key **operational barriers** to making neighbourhood health a reality, particularly around **trust, shared access, communication, governance, and role clarity**?",
-  "open": "The biggest trust barrier I see is this. What I'm seeing on the ground, and hearing from clinicians and patients, is that people are recording their appointments.",
+  "open": "All five of those barriers are real, but the biggest one I see on the ground is trust. I'm hearing from clinicians and patients that people are recording their appointments.",
   "bullets": [
-   "ChatGPT, smart glasses, phones: **no thought for the recording**",
-   "Clinicians get scribes: **patients should too**",
-   "**The voice recorder the NHS can trust**",
-   "Clinicians: ever been recorded? Everyone: **ever recorded?**"
+   "They're using ChatGPT in their pocket, smart glasses, voice recorders on their phones, with **no thought for what happens to that recording**.",
+   "Clinicians across the NHS are getting ambient scribes. I think **patients should get their own**: a simple app on their phone.",
+   "So we're building **the voice recorder the NHS can trust**. Your appointment, your record, on your phone.",
+   "If you're a clinician, have you ever been recorded? How did it feel, and did they ask? And for everyone else: **have you ever recorded a conversation**, covertly or openly?"
   ],
   "close": "Find me afterwards and ask me about MyScribe."
  },
@@ -108,9 +110,9 @@ const data = [
   "question": "How can **co-production** between **solution providers and neighbourhood teams** drive more **meaningful adoption** of digital tools, and what **examples** demonstrate this **working successfully in practice**?",
   "open": "I see co-production a bit differently. Usually, a supplier builds a product, then looks for an NHS site to try it on. I start with a problem in my neighbourhood, and then go looking for the companies to help me solve it.",
   "bullets": [
-   "**MyScribe**: Deepgram (voice), Accuro (NHS reach), PKB (patient-held records)",
-   "**Shuru Tech**: build started yesterday",
-   "Brought together around **my neighbours' problem**"
+   "MyScribe is the example. We're speaking to **Deepgram** for their voice models, **Accuro** for their reach into the NHS, and **Patients Know Best**, because I'm all about patients holding their own records.",
+   "And our team of AI engineers from **Shuru Tech** started on the actual build **yesterday**.",
+   "I've **brought them together** around a problem my neighbours are actually facing, rather than a product looking for a home."
   ],
   "close": "That's real co-production. It starts with the neighbourhood's problem, not the supplier's product."
  },
@@ -120,15 +122,15 @@ const data = [
   "question": "Given that many **determinants of health sit outside healthcare**, how can we **strengthen partnerships with local authorities and VCSE organisations** to deliver preventative support, improve outcomes, and reduce future demand on services?",
   "open": "Most of what keeps my neighbours well or makes them unwell happens nowhere near the surgery: housing, money, loneliness. So partnership with the council and the voluntary sector isn't optional. It's the job.",
   "bullets": [
-   "VCS: **equal partner**. Local authorities: others know better",
-   "**Framework**: policy, surveys, patient voice. **Function**: build",
-   "Tired, stressed, overwhelmed: **things look different**",
-   "**Afternote**: private GPs have it, **NHS should too**"
+   "We're asking a lot of the voluntary sector. They should be treated as an **equal partner**, and that means **multi-year funding, not short-term grants**.",
+   "On local authorities, **others on the panel** will no doubt give a better answer than me.",
+   "For me, the framework is national policy, national surveys and the patient voice. And the function is cracking on and **building for my neighbours**, for when they're **tired, stressed or overwhelmed**.",
+   "Like **Afternote**, sent to your phone straight after your appointment: what just happened, what to watch out for, and what to do next. Private GP patients are starting to get these. I think **those of us who rely on the NHS should get them too**."
   ],
   "close": "In Weymouth and on Portland, that's what we're doing. We're building the gold standard in neighbourhood health. Come and find me."
  }
 ];
-function md(t){const e=t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');return e.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');}
+function md(t){const e=t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');return e.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/_(.+?)_/g,'<em>$1</em>');}
 const nav=document.getElementById('nav'),wrap=document.getElementById('wrap');
 data.forEach((d,i)=>{
   const bt=document.createElement('button');bt.innerHTML='<b>Q'+d.q+'</b>'+d.tag;bt.onclick=()=>show(i);nav.appendChild(bt);
